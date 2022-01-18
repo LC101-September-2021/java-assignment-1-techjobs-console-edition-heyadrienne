@@ -10,7 +10,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -112,7 +112,7 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
@@ -124,14 +124,15 @@ public class TechJobs {
 
         if (someJobs.size() == 0) {
             System.out.println("No results");
-        } else {
-            for (HashMap <String, String> job : someJobs) {
-                System.out.println("*****");
-                for(Map.Entry<String, String> jobInfo : job.entrySet()) {
-                    System.out.println(jobInfo.getKey() + ": " + jobInfo.getValue());
-                }
-                System.out.println("*****");
+            return;
+        }
+        for (HashMap<String, String> job : someJobs) {
+            String result = "\n*****\n";
+            for (Map.Entry<String, String> jobInfo : job.entrySet()) {
+                result += (jobInfo.getKey() + ": " + jobInfo.getValue() + "\n");
             }
+            result += "*****";
+            System.out.println(result);
         }
     }
 }
