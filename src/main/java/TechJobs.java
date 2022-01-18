@@ -123,7 +123,7 @@ public class TechJobs {
         //System.out.println("printJobs is not implemented yet");
 
         if (someJobs.size() == 0) {
-            System.out.println("Unfortunately no jobs matching that criteria were found.");
+            System.out.println("No results");
         } else {
             for (HashMap <String, String> job : someJobs) {
                 System.out.println("*****");
